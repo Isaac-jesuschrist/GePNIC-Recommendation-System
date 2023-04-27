@@ -2,50 +2,75 @@
 <html>
   <head>
     <title>GePNIC</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <style>
-      h1 {
-        font-size: 40px;
-        font-family: Roboto;
-        font-weight: normal;
-        color: rgb(50, 50, 50);
-        text-align: center;
-      }
-
       #banner {
         width: 100%;
         height: 420px;
         object-fit: cover;
       }
-
-      h2 {
-        font-size: 32px;
-        font-family: Roboto;
-        text-align: center;
-        font-weight: normal;
-        color: rgb(100, 100, 100)
-      }
-
-      .bodytext {
-        font-family: Roboto;
-        font-size: 22px;
-        font-weight: normal;
-        color: rgb(80, 80, 80);
-      }
-
-      #container {
-        max-width:720px;
-        margin: 0 auto 0 auto;
-      }
     </style>
   </head>
   <body>
-    <div id="container">
-      <h1>GePNIC Websie</h1>
-      <img id="banner" src="https://gepnic-recommendation-system.isaact4.repl.co/static/GePNIC.jpeg">
-      <h2>About GePNIC</h2>
-      <p class="bodytext">National Informatics Centre (NIC), Ministry of Electronics and Information Technology, Government of India has developed eProcurement software system, GePNIC to cater to the procurement/tendering requirements of the Government departments and organizations. GePNIC was launched in 2007 and was matured as a product over the decade. The system is Generic in nature and can easily be adapted for all kinds of procurement activities such as Goods, Services and Works by accross government.</p>
-      <div style="text-align:center";>  
-        <p>Copyright 2023, GePNIC</p>
+    <div class="container">
+      <h1 class="text-center mt-2 mb-4">GePNIC Website</h1>
+      <img class = "img-fluid" id="banner" src="https://gepnic-recommendation-system.isaact4.repl.co/static/GePNIC.jpeg">
+      <h2 class="text-center mb-4">About GePNIC</h2>
+      <p class="lead">National Informatics Centre (NIC), Ministry of Electronics and Information Technology, Government of India has developed eProcurement software system, GePNIC to cater to the procurement/tendering requirements of the Government departments and organizations. GePNIC was launched in 2007 and was matured as a product over the decade. The system is Generic in nature and can easily be adapted for all kinds of procurement activities such as Goods, Services and Works by accross government.</p>
+
+      <h2 class="text-center mt-2 mb-4">Bidder Options</h2>
+
+      <select class="form-select mt-4 mb-4" aria-label="Default select example">
+        <option selected>{{bidder_option['bidder_location'][0]}}</option>
+        <option selected>{{bidder_option['bidder_location'][1]}}</option>
+        <option selected>{{bidder_option['bidder_location'][2]}}</option>
+        <option selected>{{bidder_option['bidder_location'][3]}}</option>
+        <option selected>{{bidder_option['bidder_location'][4]}}</option>
+        <option selected>{{bidder_option['bidder_location'][5]}}</option>
+        <option selected>{{bidder_option['bidder_location'][6]}}</option>
+        <option selected>{{bidder_option['bidder_location'][7]}}</option>
+        <option selected>{{bidder_option['bidder_location'][8]}}</option>
+        <option selected>{{bidder_option['bidder_location'][9]}}</option>
+      </select>
+
+      <select class="form-select mt-4 mb-4" aria-label="Default select example">
+        <option selected>{{bidder_option['tender_type_name'][0]}}</option>
+        <option selected>{{bidder_option['tender_type_name'][1]}}</option>
+        <option selected>{{bidder_option['tender_type_name'][2]}}</option>
+        <option selected>{{bidder_option['tender_type_name'][3]}}</option>
+        <option selected>{{bidder_option['tender_type_name'][4]}}</option>
+        <option selected>{{bidder_option['tender_type_name'][5]}}</option>
+      </select>
+
+      <select class="form-select mt-4 mb-4" aria-label="Default select example">
+        <option selected>{{bidder_option['tender_category_name'][0]}}</option>
+        <option selected>{{bidder_option['tender_category_name'][1]}}</option>
+        <option selected>{{bidder_option['tender_category_name'][2]}}</option>
+      </select>
+
+      <select class="form-select mt-4 mb-4" aria-label="Default select example">
+        <option selected>Bidder Type: {{bidder_option['tender_form_contract_name'][0]}}</option>
+        <option selected>{{bidder_option['tender_form_contract_name'][1]}}</option>
+        <option selected>{{bidder_option['tender_form_contract_name'][2]}}</option>
+        <option selected>{{bidder_option['tender_form_contract_name'][3]}}</option>
+        <option selected>{{bidder_option['tender_form_contract_name'][4]}}</option>
+        <option selected>{{bidder_option['tender_form_contract_name'][5]}}</option>
+        <option selected>{{bidder_option['tender_form_contract_name'][6]}}</option>
+        <option selected>{{bidder_option['tender_form_contract_name'][7]}}</option>
+        <option selected>{{bidder_option['tender_form_contract_name'][8]}}</option>
+        <option selected>{{bidder_option['tender_form_contract_name'][9]}}</option>
+        <option selected>{{bidder_option['tender_form_contract_name'][10]}}</option>
+      </select>
+      
+
+
+      
+      <div style="text-align:center";> 
+        <button class="btn btn-primary btn-lg mt-4 mb-4">Contact us</button>
+        <p class="mt-4 mb-4">Copyright 2023, GePNIC</p>
+      </div>
     </div>
   </body>
 </html>
